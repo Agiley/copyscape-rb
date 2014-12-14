@@ -11,7 +11,8 @@ module Copyscape
     extend Forwardable
     
     def_delegators :response, :duplicate_count, :duplicates, :duplicate?,
-                   :count, :error, :error?, :query, :query_words, :raw_response
+                   :count, :error, :error?, :query, :query_words, :raw_response,
+                   :all_words_matched, :all_percent_matched, :all_text_matched
 
     def base_params
       raise "You must set Copyscape.username" unless Copyscape.username

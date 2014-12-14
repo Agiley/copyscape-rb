@@ -25,6 +25,23 @@ module Copyscape
       count = field('count')
       count.to_i
     end
+
+    # Returns the number of source words matched
+    def all_words_matched
+      all_words_matched = field('allwordsmatched')
+      all_words_matched.to_i if all_words_matched
+    end
+    
+    # Returns the percentage of source words matched
+    def all_percent_matched
+      all_percent_matched = field('allpercentmatched')
+      all_percent_matched.to_i if all_percent_matched
+    end
+    
+    # Returns the full extract of source text matched
+    def all_text_matched
+      all_text_matched = field('alltextmatched')
+    end
     
     # Returns true if the response was an error
     def error?
