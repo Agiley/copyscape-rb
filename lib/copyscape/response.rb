@@ -40,7 +40,12 @@ module Copyscape
     
     # Returns the full extract of source text matched
     def all_text_matched
-      all_text_matched = field('alltextmatched')
+      field('alltextmatched')
+    end
+    
+    # Returns the URL for the full detail page for all matching results
+    def all_view_url
+      field('allviewurl')
     end
     
     # Returns true if the response was an error
